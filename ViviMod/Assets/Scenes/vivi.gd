@@ -1,42 +1,22 @@
 
-using Godot;
+extends Node2D
 
-public partial class ViviCharacter : Node2D
-{
-	private AnimatedSprite2D _sprite = null!;
+@onready var sprite: AnimatedSprite2D = $Visuals/AnimatedSprite2D
 
-	public override void _Ready()
-	{
-		_sprite = GetNode<AnimatedSprite2D>(
-            "AnimatedSprite2D"
-		);
+func _ready() -> void:
+	sprite.play("Idle")
 
-		// Start with the idle animation.
-		_sprite.Play("Idle");
-	}
+func play_idle() -> void:
+	sprite.play("Idle")
 
-	public void PlayIdle()
-	{
-		_sprite.Play("Idle");
-	}
+func play_casting() -> void:
+	sprite.play("Casting")
 
-	public void PlayCasting()
-	{
-		_sprite.Play("Casting");
-	}
+func play_magic_spell() -> void:
+	sprite.play("MagSpell")
 
-	public void PlayMagicSpell()
-	{
-		_sprite.Play("MagSpell");
-	}
+func play_physical_attack() -> void:
+	sprite.play("PhysAttack")
 
-	public void PlayPhysicalAttack()
-	{
-		_sprite.Play("PhysAttack");
-	}
-
-	public void PlayVictory()
-	{
-		_sprite.Play("Start_Victory");
-	}
-}
+func play_victory() -> void:
+	sprite.play("Start_Victory")

@@ -13,6 +13,26 @@ namespace ViviMod.ViviModCode.Character;
 
 public class ViviMod : PlaceholderCharacterModel
 {
+    public ViviMod()
+    {
+        const string path = "res://Assets/Scenes/Vivi.tscn";
+
+        GD.Print("[ViviMod] Scene exists: " + ResourceLoader.Exists(path));
+
+        var scene = ResourceLoader.Load<PackedScene>(path);
+
+        GD.Print("[ViviMod] Scene loaded: " + (scene != null));
+
+        if (scene != null)
+        {
+            var instance = scene.Instantiate();
+
+            GD.Print("[ViviMod] Scene instantiated: " + (instance != null));
+            GD.Print("[ViviMod] Root type: " + instance.GetType().Name);
+
+            instance.QueueFree();
+        }
+    }
     public const string CharacterId = "ViviMod";
     
     public static readonly Color Color = new("4097f5");
@@ -20,7 +40,15 @@ public class ViviMod : PlaceholderCharacterModel
     public override Color NameColor => Color;
     public override CharacterGender Gender => CharacterGender.Neutral;
     public override int StartingHp => 65;
-    
+    public override string CustomVisualPath
+    {
+        get
+        {
+            GD.Print("[ViviMod] CustomVisualPath accessed");
+            GD.Print("[ViviMod] Returning: res://Assets/Scenes/Vivi.tscn");
+            return "res://Assets/Scenes/Vivi.tscn";
+        }
+    }
     public override IEnumerable<CardModel> StartingDeck => [
         ModelDb.Card<StrikeIronclad>(),
         ModelDb.Card<StrikeIronclad>(),
