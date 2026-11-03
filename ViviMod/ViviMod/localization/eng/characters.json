@@ -1,0 +1,16 @@
+{
+    "VIVIMOD-VIVI_MOD.title": "Vivi",
+    "VIVIMOD-VIVI_MOD.titleObject": "Vivi",
+    "VIVIMOD-VIVI_MOD.description": "A young black mage who commands powerful elemental magic.",
+    "VIVIMOD-VIVI_MOD.pronounObject": "him",
+    "VIVIMOD-VIVI_MOD.possessiveAdjective": "his",
+    "VIVIMOD-VIVI_MOD.pronounPossessive": "his",
+    "VIVIMOD-VIVI_MOD.pronounSubject": "he",
+    "VIVIMOD-VIVI_MOD.goldMonologue": "I wonder what I should buy...",
+    "VIVIMOD-VIVI_MOD.eventDeathPrevention": "I... I'm still here!",
+    "VIVIMOD-VIVI_MOD.aromaPrinciple": "Magic",
+    "VIVIMOD-VIVI_MOD.cardsModifierTitle": "Vivi's Cards",
+    "VIVIMOD-VIVI_MOD.cardsModifierDescription": "Cards belonging to Vivi.",
+    "VIVIMOD-VIVI_MOD.banter.alive.endTurnPing": "I'm ready!",
+    "VIVIMOD-VIVI_MOD.banter.dead.endTurnPing": "..."
+}
